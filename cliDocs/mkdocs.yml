@@ -1,0 +1,10 @@
+site_name: CLI Docs
+theme:
+    name: readthedocs
+    highlightjs: true
+    hljs_languages:
+        - yaml
+        - rust
+plugins:
+  - search
+  - print-site

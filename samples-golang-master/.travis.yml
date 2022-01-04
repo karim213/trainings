@@ -1,0 +1,21 @@
+language: go
+
+go:
+  - 1.16.x
+
+install:
+  - npm install
+
+script:
+  - npm test
+
+env:
+  global:
+
+addons:
+  sauce_connect: true
+  apt:
+    packages:
+    - google-chrome-stable
+    - nodejs
+

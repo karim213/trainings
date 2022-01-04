@@ -1,0 +1,25 @@
+{{template "header" .}}
+
+<div id="content" class="ui text container">
+  <h1>Embedded Sign-in Widget + Golang Example</h1>
+
+{{if .IsAuthenticated}}
+  <div>
+    <p>Welcome back, <span>{{.Profile.name}}</span>!</p>
+    <p>You have successfully authenticated against your Okta org, and have been redirected back to this application.</p>
+    <p>Visit the <a href="profile">My Profile</a> page in this application to view the information
+      retrieved with your OAuth Access Token.</p>
+  </div>
+  {{else}}
+  <div>
+    <p>Hello!</p>
+    <p>If you're viewing this page then you have successfully configured and started this example server.</p>
+    <p>This example shows you how to 
+       <a href="https://developer.okta.com/docs/guides/sign-into-web-app-remediation/aspnet/before-you-begin/">sign users in without redirection</a>
+       using an Embedded Sign-in Widget to your Golang application.</p>
+    <p>When you click the login link in the top right menu, you will be redirected to the login page on your local application.</p>
+  </div>
+  {{end}}
+
+</div>
+{{template "footer"}}
